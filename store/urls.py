@@ -25,7 +25,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    #url(r'^$', 'apps.example.views.home', name='home'),
+    url(r'^home$', 'apps.example.views.home', name='home'),
     url(r'^contact$', 'apps.example.views.contact', name='contact'),
     url(r'^about', 'apps.example.views.about', name='about'),
     url(r'^login/$',
