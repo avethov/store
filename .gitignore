@@ -1,0 +1,10 @@
+# PyCharm cache/options directory
+.idea/
+
+# Python enviroment
+env/
+
+# Database files
+*.sqlite3
+
+manage.py
