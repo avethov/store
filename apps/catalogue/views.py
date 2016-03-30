@@ -31,7 +31,7 @@ def index(request):
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'catalogue/index.html',
+        'catalogue/new_index.html',
         context_instance = RequestContext(request,
         {
             'title':'Home Page',
