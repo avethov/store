@@ -25,13 +25,26 @@ def Product2View(request):
     }
     return HttpResponse(template.render(context, request))
 
+def AkciiView(request):
+    """Renders the home page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'catalogue/akcii.html',
+        context_instance = RequestContext(request,
+        {
+            'title':'Home Page',
+            'year':datetime.now().year,
+        })
+    )
+
 
 def index(request):
     """Renders the home page."""
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'catalogue/new_index.html',
+        'catalogue/index.html',
         context_instance = RequestContext(request,
         {
             'title':'Home Page',

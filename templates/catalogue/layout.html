@@ -1,24 +1,56 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
+{% load staticfiles %}
 
-<ul style="list-style-type:disc">
-    <li><a href="/">Дом</a></li>
-    <li><a href="/list1">Кровати</a></li>
-    <li><a href="/list2">Люстры</a></li>
-</ul>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-{% block content %}
-{% endblock %}
+    <title>Кровати и матрасы</title>
 
-{% block detail %}
-{% endblock %}
+    <link href="{% static  "bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static  "css/justified-nav.css" %}" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </head>
 
-       
-</body>
+  <body>
+
+    <div class="head-container">
+      <div class="top-menu">
+        <nav>
+          <ul class="nav nav-justified">
+            <li class="active"><a href="http://127.0.0.1:8000/akcii">Акции</a></li>
+            <li><a href="http://127.0.0.1:8000/krovati">Кровати</a></li>
+            <li><a href="http://127.0.0.1:8000/matrasy">Матрасы</a></li>
+            <li><a href="http://127.0.0.1:8000/shkafy">Шкафы</a></li>
+            <li><a href="http://127.0.0.1:8000/komody-i-tumby">Комоды и тумбы</a></li>
+            <li><a href="http://127.0.0.1:8000/stoly-i-stulya">Столы и стулья</a></li>
+            <li><a href="http://127.0.0.1:8000/kontakty">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+
+  {% block content %}
+
+  {% endblock %}
+
+  {% block detail %}
+
+  {% endblock %}
+
+  <div class="footer-container">
+      <footer class="footer">
+          <p>&copy; 2016 Кровати и матрасы</p>
+      </footer>
+  </div>
+
+  </body>
 </html>

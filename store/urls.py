@@ -54,4 +54,5 @@ urlpatterns = patterns('',
     url(r'^$', 'apps.catalogue.views.index', name='index'),
     url(r'^list1/', include('apps.catalogue.urls')),
     url(r'^list2/', 'apps.catalogue.views.Product2View', name='Product2View'),
+    url(r'^akcii/', 'apps.catalogue.views.AkciiView', name='AkciiView'),
 )
