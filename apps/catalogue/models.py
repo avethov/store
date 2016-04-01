@@ -37,7 +37,7 @@ STATUS_CHOICES = (
 class ProductItem(models.Model):
     name = models.CharField(u"Название", max_length=256)
     description = models.TextField(u"Описание", blank=True)
-    price = models.DecimalField(u"Цена", max_digits=6, decimal_places=2)
+    price = models.DecimalField(u"Цена", max_digits=6, decimal_places=0)
     product_type = models.ForeignKey(
         'catalogue.ProductType',
         on_delete=models.CASCADE,
@@ -51,10 +51,10 @@ class ProductItem(models.Model):
         'catalogue.OptionGroup',
         verbose_name=u"Доступные опции"
         )
-    recommended_products = models.ManyToManyField(
+    '''recommended_products = models.ManyToManyField(
         'catalogue.ProductItem',
         verbose_name=u"Рекомендации"
-        )
+        )'''
     rating = models.FloatField(u"Рейтинг", default=0)
     date_created = models.DateTimeField(
         u"Создан",

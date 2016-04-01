@@ -25,18 +25,16 @@ def Product2View(request):
     }
     return HttpResponse(template.render(context, request))
 
+
 def AkciiView(request):
-    """Renders the home page."""
-    assert isinstance(request, HttpRequest)
-    return render(
-        request,
-        'catalogue/akcii.html',
-        context_instance = RequestContext(request,
-        {
-            'title':'Home Page',
-            'year':datetime.now().year,
-        })
-    )
+    list = ProductItem.objects.all()
+    for e in list:
+        print(e.name)
+    template = loader.get_template('catalogue/akcii.html')
+    context = {
+        'products': list,
+    }
+    return HttpResponse(template.render(context, request))
 
 
 def index(request):
